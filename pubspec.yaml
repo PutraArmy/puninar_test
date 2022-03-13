@@ -46,7 +46,6 @@ dependencies:
   permission_handler: ^8.2.0
   trust_location: ^2.0.13
   sqflite: ^2.0.2
-  path_provider: ^2.0.9
   slide_digital_clock: ^1.0.2
   intl: ^0.17.0
   geocoder: ^0.2.1

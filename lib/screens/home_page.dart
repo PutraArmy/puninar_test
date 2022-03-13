@@ -304,12 +304,20 @@ class _HomePageState extends State<HomePage> {
                   color: LightColors.mainColor,
                   width: width - 40),
               SizedBox(height: 20),
-              ListView.builder(
-                  physics: NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  itemCount: absensiData.length,
-                  itemBuilder: (context, index) =>
-                      CardAbsensiWidget(absensiData: absensiData[index]))
+              absensiData.length != 0
+                  ? ListView.builder(
+                      physics: NeverScrollableScrollPhysics(),
+                      shrinkWrap: true,
+                      itemCount: absensiData.length,
+                      itemBuilder: (context, index) =>
+                          CardAbsensiWidget(absensiData: absensiData[index]),
+                    )
+                  : Column(
+                      children: [
+                        Icon(Icons.folder_off_outlined),
+                        Text("History is empty"),
+                      ],
+                    ),
             ],
           ),
         ),

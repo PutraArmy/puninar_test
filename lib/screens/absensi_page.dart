@@ -64,6 +64,7 @@ class _AbsensiPageState extends State<AbsensiPage> {
           await Geocoder.local.findAddressesFromCoordinates(coordinates);
       address = addresses.first;
       print("address ${address.addressLine}");
+      setState(() {});
     } catch (e) {
       print("Error occured: $e");
     }
